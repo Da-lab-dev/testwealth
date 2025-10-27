@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classed Law</title>
+
+    <!-- ICONSCOUT CDN -->
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+
+     <!--Google Fonts (Montserrat)-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+
+<link rel="stylesheet" href=".css/style.css">
+<link rel="stylesheet" href=".css/contact.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+<a href="index.html"><h4 class="win">CLASSEDLAW</h4></a>
+<ul class="nav__menu">
+    <li><a href="index.html">Home</a></li>
+     <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+       <li><a href="contact.html">Contact</a></li>
+</ul>
+<button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+<button id="close-menu-btn"><i class="uil uil-multiply"></i></i></button>
+        </div>
+    </nav>
+
+    <!--End of Navbar-->
+
+<section class="contact">
+  <div class="container contact__container">
+    <!-- Contact Info -->
+    <div class="contact__info">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you. Reach out for inquiries, collaborations, or feedback.</p>
+
+      <div class="contact__details">
+        <p><i class="uil uil-phone"></i> +234 913 026 1925</p>
+        <p><i class="uil uil-envelope"></i> anjorindanwealth@gmail.com</p>
+        <p><i class="uil uil-location-point"></i> Lagos, Nigeria</p>
+      </div>
+
+      <div class="contact__socials">
+        <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/mvgvzonv" method="POST" class="contact__form">
+  <div class="form__group">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+  </div>
+
+  <input type="email" name="email" placeholder="Your Email Address" required>
+
+  <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+
+  <button type="submit" class="btn-primary">Send Message</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container footer__container">
+        <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h4>CLASSEDLAW</h4></a>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, optio.
+            </p>
+        </div>
+
+         <div class="footer__2">
+            <h4>Permalinks</h4>
+            <ul class="Permalinks">
+                <li><a href="index.html"></a></li>
+                <li><a href="about.html"></a></li>
+                <li><a href="resources.html"></a></li>
+                <li><a href="contact.html"></a></li>
+            </ul>
+         </div>
+
+         <div class="footer__3">
+            <h4>Privacy</h4>
+            <ul class="privacy">
+                <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+            </ul>
+         </div>
+
+          <div class="footer__4">
+            <h4>Contact Us</h4>
+        <div>
+        <p>+2349130261925</p>
+        <p>anjorindanwealth@gmail.com</p>
+        </div>
+
+        <ul class="footer__socials">
+            <li><a href="#"><i class="uil uil-facebook-f"></i></a></li>
+            <li><a href="#"><i class="uil uil-whatsapp"></i></a></li>
+            <li><a href="#"><i class="uil uil-outline"></i></a></li>
+
+        </ul>
+        </div>
+
+        <div class="footer__copyright">
+            <small>Copyright &copy; CLASSEDLAW</small>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+  const form = document.querySelector('.contact__form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      alert('✅ Message sent successfully!');
+      form.reset();
+    } else {
+      alert('❌ Something went wrong. Please try again.');
+    }
+  });
+</script>
+
+      <script src="main.js"></script>
+</body>
+</html>
